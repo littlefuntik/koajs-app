@@ -9,7 +9,7 @@
 ## Run web application
 
  - Check configs in file ``PROJECT_ROOT/config.js``
- - ``npm install && npm run``
+ - ``npm install && npm run start``
 
 ## License
 
