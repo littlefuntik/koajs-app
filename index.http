@@ -1,0 +1,94 @@
+POST http://localhost:3000/api/user
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+
+{"email": "hello@gmail.com", "password": "1234567"}
+
+###
+
+POST http://localhost:3000/api/user
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+
+{"email": "hello2@gmail.com", "password": "1234567"}
+
+###
+
+POST http://localhost:3000/api/login
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+
+{"email": "hello@gmail.com", "password": "1234567"}
+
+### Create deal
+
+POST http://localhost:3000/api/deal
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+
+{
+  "receiver": 2,
+  "message": "I can sell you a bicycle at 100$",
+  "price": 100.00
+}
+
+### Get all my deals
+
+GET http://localhost:3000/api/deal
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+
+### Get all deal activities
+
+GET http://localhost:3000/api/deal/1/activity
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+
+### Create deal activity
+
+POST http://localhost:3000/api/deal/1/activity
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTM5MDg1MDExfQ.ifIJMlZjNUOn6tG3aeR_oKa4VdxOuJmI4oTCOUPjcF0
+
+{
+  "message": "I you sure? 100$"
+}
+
+### New deal activity
+
+POST http://localhost:3000/api/deal/1/activity
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+
+{
+  "message": "Oh... Okay! 90$",
+  "price": 90
+}
+
+### Accept deal activity
+
+POST http://localhost:3000/api/deal/1/accept
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTM5MDg1MDExfQ.ifIJMlZjNUOn6tG3aeR_oKa4VdxOuJmI4oTCOUPjcF0
+
+{
+  "message": "Ok. Great"
+}
+
+### Reject deal activity
+
+POST http://localhost:3000/api/deal/1/activity
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTM5MDg1MDExfQ.ifIJMlZjNUOn6tG3aeR_oKa4VdxOuJmI4oTCOUPjcF0
+
+{
+  "message": "No...",
+  "price": -1
+}
+
+###

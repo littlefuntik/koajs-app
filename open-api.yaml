@@ -1,0 +1,158 @@
+openapi: 3.0.1
+info:
+  title: API description
+  version: 0.0.1
+paths:
+  /api/user:
+    post:
+      summary: Registration
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  description: New user Email
+                  type: string
+                password:
+                  description: New user Password
+                  type: string
+                  format: password
+              required:
+              - email
+              - password
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  id:
+                    type: integer
+                  email:
+                    type: string
+                  createdAt:
+                    type: object
+  /api/login:
+    post:
+      summary: Authorization
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  description: New user Email
+                  type: string
+                password:
+                  description: New user Password
+                  type: string
+                  format: password
+              required:
+              - email
+              - password
+        required: true
+      responses:
+        200:
+          description: OK
+  /api/deal:
+    get:
+      summary: Deals list
+      responses:
+        200:
+          description: OK
+        403:
+          description: Forbidden
+    post:
+      summary: Create new deal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                receiver:
+                  description: User ID
+                  type: integer
+                message:
+                  type: string
+                price:
+                  type: number
+              required:
+              - receiver
+              - message
+              - price
+        required: true
+      responses:
+        200:
+          description: OK
+        403:
+          description: Forbidden
+  /api/deal/{dealId}/activity:
+    get:
+      summary: Deals activities list
+      parameters:
+      - name: dealId
+        in: path
+        required: true
+        schema:
+          type: number
+      responses:
+        200:
+          description: OK
+        403:
+          description: Forbidden
+    post:
+      summary: Create new deal activity
+      parameters:
+      - name: dealId
+        in: path
+        required: true
+        schema:
+          type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  default: ''
+                price:
+                  type: number
+                  description: Set -1 to decline
+              required:
+              - message
+        required: true
+      responses:
+        200:
+          description: OK
+        403:
+          description: Forbidden
+  /api/deal/{dealId}/accept:
+    post:
+      summary: Accept deal
+      parameters:
+      - name: dealId
+        in: path
+        required: true
+        schema:
+          type: number
+      responses:
+        200:
+          description: OK
+        403:
+          description: Forbidden
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
