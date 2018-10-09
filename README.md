@@ -6,6 +6,11 @@
  - Koa web framework (https://koajs.com/)
  - Sequelize ORM (http://docs.sequelizejs.com/)
 
+## Run web application
+
+ - Check configs in file ``PROJECT_ROOT/config.js``
+ - ``npm install && npm run``
+
 ## License
 
 MIT
