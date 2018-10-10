@@ -39,7 +39,7 @@ router.post('/api/deal/:dealId/activity', authOnly, (ctx, done) => {
   return routes.apiDealActivityCreate(db.user, db.deal, db.dealActivity, ctx, done);
 });
 
-config.env !== 'production' && app.use(logger());
+config.env !== config.envProduction && app.use(logger());
 app.use(fail());
 app.use(bodyParser());
 app.use(passport.initialize());
