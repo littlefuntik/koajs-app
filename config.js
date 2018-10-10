@@ -1,7 +1,12 @@
 const path = require('path');
 
+const envDevelopment = 'development';
+const envProduction = 'production';
+
 module.exports = {
-  env: process.env.NODE_ENV || 'development',
+  envDevelopment,
+  envProduction,
+  env: process.env.NODE_ENV || envDevelopment,
   host: process.env.HOST || 'localhost',
   port: process.env.PORT || 3000,
   openApi: {
