@@ -1,6 +1,5 @@
 const Koa = require('koa');
 const Router = require('koa-router');
-const logger = require('koa-logger');
 const bodyParser = require('koa-bodyparser');
 
 const config = require('./config');
@@ -8,6 +7,7 @@ const config = require('./config');
 const db = require('./models')(config.db.database, config.db.username, config.db.password, config.db.options);
 db.sequelize.sync({force: config.forceSyncDb});
 
+const logger = require('./middlewares/logger');
 const fail = require('./middlewares/fails');
 const apiDoc = require('./middlewares/apidoc');
 const passport = require('./middlewares/passport')(config.jwt.secret, db.user);
@@ -39,7 +39,7 @@ router.post('/api/deal/:dealId/activity', authOnly, (ctx, done) => {
   return routes.apiDealActivityCreate(db.user, db.deal, db.dealActivity, ctx, done);
 });
 
-app.use(logger());
+config.env !== 'production' && app.use(logger());
 app.use(fail());
 app.use(bodyParser());
 app.use(passport.initialize());
