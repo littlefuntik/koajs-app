@@ -47,4 +47,10 @@ app.use(apiDoc(config.openApi.file));
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.listen(3000);
+app.listen(config.port, config.host, listeningReporter);
+
+function listeningReporter () {
+  const { address, port } = this.address();
+  const protocol = this.addContext ? 'https' : 'http';
+  console.log(`Listening on ${protocol}://${address}:${port}...`);
+}
