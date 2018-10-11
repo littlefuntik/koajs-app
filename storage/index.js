@@ -11,7 +11,7 @@ try {
     // e.g., UTC offset. Use any offset that you would like.
   });
 } catch (e) {
-  if (e instanceof Error && 'MODULE_NOT_FOUND' !== e.code) throw e;
+  if (!(e instanceof Error && 'MODULE_NOT_FOUND' === e.code)) throw e;
 }
 
 const _modelsImport = Symbol();
