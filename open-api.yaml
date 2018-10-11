@@ -64,6 +64,8 @@ paths:
   /api/deal:
     get:
       summary: Deals list
+      security:
+      - bearerAuth: []
       responses:
         200:
           description: OK
@@ -71,6 +73,8 @@ paths:
           description: Forbidden
     post:
       summary: Create new deal
+      security:
+      - bearerAuth: []
       requestBody:
         content:
           application/json:
@@ -97,6 +101,8 @@ paths:
   /api/deal/{dealId}/activity:
     get:
       summary: Deals activities list
+      security:
+      - bearerAuth: []
       parameters:
       - name: dealId
         in: path
@@ -110,6 +116,8 @@ paths:
           description: Forbidden
     post:
       summary: Create new deal activity
+      security:
+      - bearerAuth: []
       parameters:
       - name: dealId
         in: path
@@ -139,6 +147,8 @@ paths:
   /api/deal/{dealId}/accept:
     post:
       summary: Accept deal
+      security:
+      - bearerAuth: []
       parameters:
       - name: dealId
         in: path

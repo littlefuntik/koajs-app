@@ -3,12 +3,12 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 /**
- * @param {Model} Deal
- * @param {Model} DealActivity
  * @param {Object} ctx
  * @return {Promise}
  */
-async function index(Deal, DealActivity, ctx) {
+async function index(ctx) {
+  const {Deal, DealActivity} = ctx.db.models;
+
   let identity = ctx.state.user;
   let dealId = ctx.params['dealId'];
 

@@ -2,11 +2,12 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 /**
- * @param {Model} Deal
  * @param {Object} ctx
  * @return {Promise}
  */
-async function index(Deal, ctx) {
+async function index(ctx) {
+  const {Deal} = ctx.db.models;
+
   let identity = ctx.state.user;
 
   let records = await Deal.findAll({

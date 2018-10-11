@@ -1,17 +1,18 @@
 const R = require('ramda');
 
 /**
- * @param {Model} user
  * @param {Object} ctx
  * @return {Promise}
  */
-async function create(user, ctx) {
-  let record = user.build({
+async function create(ctx) {
+  const {User} = ctx.db.models;
+
+  let user = User.build({
     email: ctx.request.body['email'],
     passwordHash: ctx.request.body['password']
   });
 
-  await record.save();
+  await user.save();
 
   ctx.body = R.pick(
     [
@@ -19,7 +20,7 @@ async function create(user, ctx) {
       'email',
       'createdAt'
     ],
-    record.toJSON()
+    user.toJSON()
   );
 }
 

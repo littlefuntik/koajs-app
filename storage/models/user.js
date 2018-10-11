@@ -1,5 +1,5 @@
 const modelName = 'user';
-const passwordHashPlugin = require('../plugins/models/passwordHash');
+const passwordHashPlugin = require('../../plugins/models/passwordHash');
 
 /**
  * Define a new user model.

@@ -1,12 +1,12 @@
 const Boom = require('boom');
 
 /**
- * @param {Model} Deal
- * @param {Model} DealActivity
  * @param {Object} ctx
  * @return {Promise}
  */
-async function create(Deal, DealActivity, ctx) {
+async function create(ctx) {
+  const {Deal, DealActivity} = ctx.db.models;
+
   let identity = ctx.state.user;
   let dealId = ctx.params['dealId'];
 

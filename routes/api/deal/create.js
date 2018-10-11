@@ -1,11 +1,10 @@
 /**
- * @param {Model} User
- * @param {Model} Deal
- * @param {Model} DealActivity
  * @param {Object} ctx
  * @return {Promise}
  */
-async function create(User, Deal, DealActivity, ctx) {
+async function create(ctx) {
+  const {User, Deal} = ctx.db.models;
+
   let sender = ctx.state.user;
   let receiver = await User.findById(ctx.request.body['receiver']);
 

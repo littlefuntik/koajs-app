@@ -2,13 +2,16 @@ const Boom = require('boom');
 const jwt = require('jsonwebtoken');
 
 /**
- * @param {KoaPassport} passport
- * @param {string} secret
  * @param {Object} ctx
  * @param {function} next
  * @return {Promise}
  */
-async function login(passport, secret, ctx, next) {
+async function login(ctx, next) {
+  /**
+   * @type {KoaPassport}
+   */
+  const passport = ctx.state._passport.instance;
+  const secret = ctx.config.jwt.secret;
   await passport.authenticate('local', function (error, user) {
     if (!user) {
       ctx.throw(Boom.badData('Incorrect email or password.'));
