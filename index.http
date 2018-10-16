@@ -25,7 +25,7 @@ Content-Type: application/json; charset=utf-8
 POST http://localhost:3000/api/deal
 Accept: application/json
 Content-Type: application/json; charset=utf-8
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5Njg5Nzk4fQ.6p5cMycxPmyYnX8dQ5SgFhgkasnGMz36yMoX4V6zURw
 
 {
   "receiver": 2,
@@ -37,13 +37,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
 
 GET http://localhost:3000/api/deal
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5NjQyMTc0fQ.6fLktHTXVDTZRCj9XdDYvyf9qLEd4vmO7tIxWu6jCtc
 
 ### Get all deal activities
 
 GET http://localhost:3000/api/deal/1/activity
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5NjQyMTc0fQ.6fLktHTXVDTZRCj9XdDYvyf9qLEd4vmO7tIxWu6jCtc
 
 ### Create deal activity
 
@@ -61,7 +61,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxN
 POST http://localhost:3000/api/deal/1/activity
 Accept: application/json
 Content-Type: application/json; charset=utf-8
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5MDMwNTYwfQ.1jEfPIPc_EPIL2ZpC6T0c3-BjJTgzh_Ssnhq9h9ckME
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5NjQyMTc0fQ.6fLktHTXVDTZRCj9XdDYvyf9qLEd4vmO7tIxWu6jCtc
 
 {
   "message": "Oh... Okay! 90$",

@@ -7,10 +7,14 @@ describe('/api', function () {
   let request;
 
   before(async function () {
+    // recreate database
+    app.context.db.sync({force: true});
+    // start app request client
     request = supertest.agent(app.callback());
   });
 
   after(async function () {
+    // close app
     app.emit('close');
   });
 

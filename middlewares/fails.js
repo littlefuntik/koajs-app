@@ -36,10 +36,22 @@ async function handleEx(ctx, next) {
     }
   } catch (ex) {
     let options = {};
+
     if (ex instanceof Sequelize.ValidationError) {
       ex.data = ex.errors;
       options.statusCode = 422;
     }
+
+    if (ex.name === 'BadRequestError') {
+      ex.message = ex.message.replace(/^\w+:\s+/, '');
+      options.statusCode = ex.code;
+    }
+
+    if (ex.name === 'BadRequestError' && ex.location.in === 'request-body') {
+      options.statusCode = 422;
+      options.data = ex.suggestions.map(e => ({field: e.path, message: e.error}));
+    }
+
     ex = ex ? Boom.boomify(ex, options) : Boom.notFound();
     ex.output.payload.data = transformData(ex.output.statusCode, ex.data);
     ctx.status = ex.output.statusCode;
