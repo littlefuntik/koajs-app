@@ -32,6 +32,7 @@ npm install && npm run start
 
 For example, configure app to run on ``localhost:3000``
 
+ - http://localhost:3000/ - Main page
  - http://localhost:3000/api/ - API endpoint
  - http://localhost:3000/openapi.json - Open API schema
  - http://localhost:3000/openapi.html - Swagger location (API description)
