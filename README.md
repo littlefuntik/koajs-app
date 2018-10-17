@@ -10,7 +10,7 @@
  [![Open API](https://img.shields.io/badge/OpenAPI-v3-green.svg?style=flat)](https://www.openapis.org/)
  [![Swagger](https://img.shields.io/badge/Swagger-latest-green.svg?style=flat)](https://swagger.io/)
  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-latest-green.svg?style=flat)](https://www.postgresql.org/)
- [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://www.postgresql.org/)
+ [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://en.wikipedia.org/wiki/MIT_License)
 </p>
 
 ## Usage
