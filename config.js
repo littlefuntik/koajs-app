@@ -4,6 +4,7 @@ const envDevelopment = 'development';
 const envProduction = 'production';
 
 module.exports = {
+  staticPath: path.join(__dirname, 'static'),
   envDevelopment,
   envProduction,
   env: process.env.NODE_ENV || envDevelopment,

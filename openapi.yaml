@@ -4,6 +4,15 @@ info:
   version: 0.0.1
 paths:
   /api/user:
+    get:
+      summary: Users list
+      security:
+      - bearerAuth: []
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
     post:
       summary: Registration
       requestBody:
@@ -61,6 +70,16 @@ paths:
       responses:
         200:
           description: OK
+  /api/me:
+    get:
+      summary: My authorized account
+      security:
+      - bearerAuth: []
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
   /api/deal:
     get:
       summary: Deals list

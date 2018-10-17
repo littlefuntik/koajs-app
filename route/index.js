@@ -4,9 +4,11 @@ const Boom = require('boom');
 module.exports = [
   // app
   _.post('/api/login', require('./api/login')),
+  _.get('/api/me', authenticate(require('./api/me'))),
 
   // user
   _.post('/api/user', require('./api/user/create')),
+  _.get('/api/user', authenticate(require('./api/user/list'))),
 
   // deal
   _.post('/api/deal', authenticate(require('./api/deal/create'))),

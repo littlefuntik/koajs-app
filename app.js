@@ -1,3 +1,4 @@
+const serve = require('koa-static');
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const oas = require('koa-oas3').oas;
@@ -18,6 +19,7 @@ app.context.config = config;
 if (config.env !== config.envProduction) {
   app.use(logger());
 }
+app.use(serve(config.staticPath));
 app.use(fail());
 app.use(bodyParser());
 app.use(passport.initialize());
