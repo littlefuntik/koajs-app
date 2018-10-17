@@ -15,10 +15,7 @@
 
 ## Usage
 
-Check configs in file ``PROJECT_ROOT/config.js``.
-See environment variables.
-
-### Usage
+Check configs in file ``PROJECT_ROOT/config.js`` or environment variables.
 
 Run application
 
