@@ -179,6 +179,30 @@ paths:
           description: OK
         403:
           description: Forbidden
+  /api/deal/{dealId}/access:
+    get:
+      summary: Deal access rights
+      security:
+      - bearerAuth: []
+      parameters:
+      - name: dealId
+        in: path
+        required: true
+        schema:
+          type: number
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  canAnswer:
+                    type: boolean
+        403:
+          description: Forbidden
 components:
   securitySchemes:
     bearerAuth:

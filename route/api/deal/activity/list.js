@@ -24,7 +24,7 @@ async function mw(ctx, dealId) {
       }
     }],
     order: [
-      ['updatedAt', 'DESC']
+      ['updatedAt', 'ASC']
     ]
   });
 

@@ -9,7 +9,6 @@ async function mw(ctx, dealId) {
   const {Deal, DealActivity} = ctx.db.models;
 
   let sender = ctx.state.user;
-  let dealId = ctx.params['dealId'];
 
   let deal = await Deal.findById(dealId);
 

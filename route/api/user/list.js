@@ -8,14 +8,14 @@ const Op = Sequelize.Op;
 async function mw(ctx) {
   const {User} = ctx.db.models;
 
-  let identity = ctx.state.user;
+  // let identity = ctx.state.user;
 
   let records = await User.findAll({
-    where: {
-      id: {
-        [Op.ne]: identity.id
-      }
-    },
+    // where: {
+    //   id: {
+    //     [Op.ne]: identity.id
+    //   }
+    // },
     order: [
       ['id', 'ASC']
     ]

@@ -43,11 +43,17 @@
             </div>
             <div class="col-1 border-left border-top">&nbsp;</div>
             <div class="col-3 p-2">
-                <create-deal v-on:deal:added="deals.unshift($event)"></create-deal>
+                <create-deal v-on:deal:added="deals.unshift($event)" v-bind:users="users"></create-deal>
             </div>
             <div class="col-1 border-right border-bottom">&nbsp;</div>
-            <div class="col-7 p-2 border-right">
-                <Deal v-for="deal in deals" v-bind:data="deal" :key="deal.id"></Deal>
+            <div class="col-7 p-2">
+                <deal
+                        v-for="deal in deals"
+                        v-bind:data="deal"
+                        v-bind:users="users"
+                        :key="deal.id"
+                        v-on:deal:activity:added="reloadDeals()"
+                ></deal>
             </div>
         </div>
     </div>
