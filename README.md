@@ -9,7 +9,8 @@
 ## Run web application
 
  - Check configs in file ``PROJECT_ROOT/config.js``
- - ``npm install && npm run start``
+ - run locally ``npm install && npm run start``
+ - or using docker ``docker-compose up``
 
 ## Usage
 

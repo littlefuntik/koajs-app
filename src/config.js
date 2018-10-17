@@ -8,7 +8,7 @@ module.exports = {
   envDevelopment,
   envProduction,
   env: process.env.NODE_ENV || envDevelopment,
-  host: process.env.HOST || 'localhost',
+  host: process.env.HOST || '0.0.0.0',
   port: process.env.PORT || 3000,
   openApi: {
     file: path.join(__dirname, 'open-api.yaml')

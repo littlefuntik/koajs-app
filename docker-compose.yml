@@ -1,29 +1,26 @@
-version: '3.3'
+version: "3"
 
 services:
+
   postgres:
-    image: postgres:latest
+    image: postgres
     restart: always
     environment:
       POSTGRES_DB: "postgres"
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "secret"
 
-  app:
+  web:
     depends_on:
     - postgres
     build: .
-    command: npm run start
-    volumes:
-    - .:/usr/app/
-    - /usr/app/node_modules
     ports:
     - "3000:3000"
+    - "9229:9229"
     restart: always
     environment:
-      DBPASSWORD: "secret"
-      DBHOST: "postgres"
-      JWTSECRET: "secret"
-      NODE_ENV: "development"
-volumes:
-  db_data:
+      NODE_ENV: development
+      PORT: 3000
+      DBPASSWORD: secret
+      DBHOST: postgres
+      JWTSECRET: secret

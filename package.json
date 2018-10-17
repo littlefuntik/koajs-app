@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "test": "mocha test/app.js"
   },
   "author": "Hryhorii Furletov (littlefuntik@gmail.com)",
