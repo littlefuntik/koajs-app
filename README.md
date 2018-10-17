@@ -1,10 +1,10 @@
 # Example Koa web application
 
-## Screenshots
-
-![Open API](screenshots/openapi-swagger.png)
-![Authenticate](screenshots/signup_or_login.png)
-![Work Area](screenshots/workarea.png)
+<p align="center">
+ <img height="170" title="Open API" src="screenshots/openapi-swagger.png">
+ <img height="170" title="Authenticate" src="screenshots/signup_or_login.png">
+ <img height="170" title="Work Area" src="screenshots/workarea.png">
+</p>
 
 ## Main components
 
