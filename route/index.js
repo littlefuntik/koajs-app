@@ -14,6 +14,7 @@ module.exports = [
   _.post('/api/deal', authenticate(require('./api/deal/create'))),
   _.post('/api/deal/:dealId/accept', authenticate(require('./api/deal/accept'))),
   _.get('/api/deal', authenticate(require('./api/deal/list'))),
+  _.get('/api/deal/:dealId/access', authenticate(require('./api/deal/access'))),
 
   // deal activity
   _.post('/api/deal/:dealId/activity', authenticate(require('./api/deal/activity/create'))),
