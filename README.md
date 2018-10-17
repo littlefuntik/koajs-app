@@ -6,6 +6,13 @@
  <img height="170" title="Work Area" src="screenshots/workarea.png">
 </p>
 
+## Features
+
+ - [x] Backend
+ - [x] Frontend
+ - [x] Docker
+ - [ ] Tests (in progress)
+
 ## Main components
 
  - Koa web framework (https://koajs.com/)
@@ -25,13 +32,6 @@ For example, configure app to run on ``localhost:3000``
  - http://localhost:3000/api/ - API endpoint
  - http://localhost:3000/openapi.json - Open API schema
  - http://localhost:3000/openapi.html - Swagger location (API description)
-
-## Features
-
- - [x] Backend
- - [x] Frontend
- - [x] Docker
- - [ ] Tests (in progress)
 
 ## License
 
