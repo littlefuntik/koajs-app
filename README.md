@@ -1,5 +1,11 @@
 # Example Koa web application
 
+## Screenshots
+
+![Open API](screenshots/openapi-swagger.png)
+![Authenticate](screenshots/signup_or_login.png)
+![Work Area](screenshots/workarea.png)
+
 ## Main components
 
  - Koa web framework (https://koajs.com/)
@@ -19,6 +25,13 @@ For example, configure app to run on ``localhost:3000``
  - http://localhost:3000/api/ - API endpoint
  - http://localhost:3000/openapi.json - Open API schema
  - http://localhost:3000/openapi.html - Swagger location (API description)
+
+## Features
+
+ - [x] Backend
+ - [x] Frontend
+ - [x] Docker
+ - [ ] Tests (in progress)
 
 ## License
 
