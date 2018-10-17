@@ -1,6 +1,6 @@
 # Koa application
 
-<p align="center">
+<p align="left">
  <img height="170" title="Open API" src="screenshots/openapi-swagger.png">
  <img height="170" title="Authenticate" src="screenshots/signup_or_login.png">
  <img height="170" title="Work Area" src="screenshots/workarea.png">
