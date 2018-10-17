@@ -7,7 +7,7 @@
     "test": "mocha test/app.js"
   },
   "author": "Hryhorii Furletov (littlefuntik@gmail.com)",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "@types/koa": "^2.0.46",
     "bcrypt": "^3.0.1",
