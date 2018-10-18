@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: app_test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+
+  web:
+    depends_on:
+    - postgres
+    build: .
+    command: npm test
+    environment:
+      NODE_ENV: production
+      DBPASSWORD: secret
+      DBHOST: postgres
+      DBNAME: app_test
+      JWTSECRET: secret

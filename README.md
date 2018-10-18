@@ -19,7 +19,7 @@ Check configs in file ``PROJECT_ROOT/config.js`` or environment variables.
 
 Run application
 
-```$bash
+```bash
 docker-compose up
 
 # or
@@ -33,6 +33,14 @@ For example, configure app to run on ``localhost:3000``
  - http://localhost:3000/api/ - API endpoint
  - http://localhost:3000/openapi.json - Open API schema
  - http://localhost:3000/openapi.html - Swagger location (API description)
+
+## Tests
+
+Docker command for run tests:
+
+```bash
+docker-compose -f docker-compose.test.yml run web
+```
 
 ## Features
 
