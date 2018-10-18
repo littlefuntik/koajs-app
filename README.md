@@ -1,10 +1,10 @@
 # Koa application
 
 <p align="left">
- <img height="170" title="Open API" src="screenshots/openapi-swagger.png">
- <img height="170" title="Authenticate" src="screenshots/signup_or_login.png">
- <img height="170" title="Work Area" src="screenshots/workarea.png">
- <img height="170" title="Tests" src="screenshots/tests.png">
+ <img height="150" title="Open API" src="screenshots/openapi-swagger.png">
+ <img height="150" title="Authenticate" src="screenshots/signup_or_login.png">
+ <img height="150" title="Work Area" src="screenshots/workarea.png">
+ <img height="150" title="Tests" src="screenshots/tests.png">
 
  [![Node.js](https://img.shields.io/badge/Node.js-latest-green.svg?style=flat)](https://nodejs.org/)
  [![Koa.js](https://img.shields.io/badge/Koa.js-v2-green.svg?style=flat)](https://koajs.com/)
