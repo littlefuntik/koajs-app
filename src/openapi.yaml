@@ -117,6 +117,22 @@ paths:
           description: OK
         403:
           description: Forbidden
+  /api/deal/{dealId}:
+    get:
+      summary: View deal
+      security:
+      - bearerAuth: []
+      parameters:
+      - name: dealId
+        in: path
+        required: true
+        schema:
+          type: number
+      responses:
+        200:
+          description: OK
+        403:
+          description: Forbidden
   /api/deal/{dealId}/activity:
     get:
       summary: Deals activities list
