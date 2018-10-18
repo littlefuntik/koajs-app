@@ -48,7 +48,7 @@ docker-compose -f docker-compose.test.yml run --rm web
  - [x] Backend
  - [x] Frontend
  - [x] Docker
- - [X] Tests (in progress)
+ - [X] Tests
 
 ## License
 
