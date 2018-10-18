@@ -14,6 +14,8 @@ services:
     - postgres
     build: .
     command: npm test
+    volumes:
+    - ./src/test:/app/test
     environment:
       NODE_ENV: production
       DBPASSWORD: secret
