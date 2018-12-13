@@ -8,6 +8,8 @@
 
  [![Node.js](https://img.shields.io/badge/Node.js-latest-green.svg?style=flat)](https://nodejs.org/)
  [![Koa.js](https://img.shields.io/badge/Koa.js-v2-green.svg?style=flat)](https://koajs.com/)
+ [![Vue.js](https://img.shields.io/badge/Vue.js-v2-green.svg?style=flat)](https://vuejs.org/)
+ [![Bootstrap](https://img.shields.io/badge/Bootstrap-v4-green.svg?style=flat)](http://getbootstrap.com/)
  [![Open API](https://img.shields.io/badge/OpenAPI-v3-green.svg?style=flat)](https://www.openapis.org/)
  [![Swagger](https://img.shields.io/badge/Swagger-latest-green.svg?style=flat)](https://swagger.io/)
  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-latest-green.svg?style=flat)](https://www.postgresql.org/)
